@@ -1,0 +1,8 @@
+.row{
+    color: pink;
+    display: flex;
+    align-items: center;
+}
+.column{
+    color: green;
+}
