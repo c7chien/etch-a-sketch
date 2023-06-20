@@ -28,13 +28,18 @@ function deleteGrid(){
 
 function changeColor(){
     // console.dir(this);
-    this.classList.toggle("hover");
+    let r = Math.floor(Math.random()*256);
+    let g = Math.floor(Math.random()*256);
+    let b = Math.floor(Math.random()*256);
+    this.style.backgroundColor = `rgb(${r},${g},${b})`;
+    // this.classList.toggle("hover");
 }
-
-const allDiv = Array.from(document.querySelectorAll(".pixel"));
 
 // Initiate grid
 createGrid(16);
+
+const allDiv = Array.from(document.querySelectorAll(".pixel"));
+
 
 allDiv.forEach(grid => grid.addEventListener("mouseover",changeColor));
 
